@@ -1,6 +1,5 @@
 body {
-    background-color: #00c4b4;
-    
+    background-color: #00c4b4; 
 }
 
 .main-section {
@@ -10,16 +9,37 @@ body {
 
 h1 {
     text-align: center;
+    font-family: "Poppins", serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 75px;
+}
+
+p {
+    font-family: "Poppins", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px; 
+}
+
+li {
+    font-family: "Poppins", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px; 
 }
 
 .content-bottle {
     align-self: center;
+    display: flex;    
+    flex-wrap: wrap;
+    flex-direction: row;
 }
 
 .center-section {
     background-color: #dc2aec;
-    width: 954px;
-    height: 594px;
+    width: 500px;
+    max-width: 500px;   
     margin:auto;
     display: flex; 
     flex-wrap: wrap;
@@ -31,6 +51,10 @@ h1 {
     align-content: center;
 }
 
+.button-div {
+    align-self: center;
+}
+
 button {
     width: 202px;
     height: 48px;
@@ -40,29 +64,37 @@ button {
     margin: 10px;
     margin-top: 56px;
     color: white;
-    font-family: "Roboto", serif;
-    font-optical-sizing: auto;
+    font-family: "Poppins", serif;
     font-weight: 700;
     font-style: normal;
+    font-optical-sizing: auto;
     font-size: 18px;
     letter-spacing: 2px;
     box-shadow: 1px 1px 4px #000000;
     }
 
-.poppins-regular {
-    font-family: "Poppins", serif;
-    font-weight: 400;
-    font-style: normal;
-    }
-    
-.poppins-medium {
-    font-family: "Poppins", serif;
-    font-weight: 500;
-    font-style: normal;
-    }
-    
-.poppins-bold {
-    font-family: "Poppins", serif;
-    font-weight: 700;
-    font-style: normal;
-    }
+button:hover {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    transition: all 0.9s ease-in-out;
+    transition-delay: 0.2s;
+}
+
+@keyframes imgRotateLeft {
+    from {transform: scale(1) rotate(0deg);}
+    to {transform: scale(1) rotate(-90deg);}
+}
+
+@keyframes imgRotate {
+    from {transform: scale(1) rotate(0deg);}
+    to {transform: scale(1) rotate(90deg);}
+}
+
+.img-animation {
+    animation: imgRotate 2.5s ease infinite;
+}
+
+.img-animation-left {
+    animation: imgRotateLeft 2.5s ease infinite;
+}
+
